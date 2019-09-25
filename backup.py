@@ -23,7 +23,6 @@ class MyLogger(object):
 
 
 def my_hook(d):
-    log.info(d)
     if d['status'] == 'finished':
         log.info('Done downloading, now converting ...')
 
