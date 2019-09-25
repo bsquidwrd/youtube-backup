@@ -13,18 +13,17 @@ log.addHandler(handler)
 
 class MyLogger(object):
     def debug(self, msg):
-        # log.debug(msg)
-        pass
+        log.debug(msg)
 
     def warning(self, msg):
-        # log.warning(msg)
-        pass
+        log.warning(msg)
 
     def error(self, msg):
         log.error(msg)
 
 
 def my_hook(d):
+    log.info(d)
     if d['status'] == 'finished':
         log.info('Done downloading, now converting ...')
 
