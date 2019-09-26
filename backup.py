@@ -6,7 +6,11 @@ import logging
 
 
 log = logging.getLogger(__name__)
-log.setLevel(logging.INFO)
+logging.basicConfig(
+    format='%(asctime)s %(levelname)-8s %(message)s',
+    level=logging.INFO,
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 handler = logging.StreamHandler()
 log.addHandler(handler)
 
